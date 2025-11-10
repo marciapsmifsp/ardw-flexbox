@@ -1,0 +1,77 @@
+h1 {body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* O Contêiner Flexbox principal */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os anos horizontalmente */
+    gap: 20px; /* Adiciona espaço entre os contêineres de ano */
+}
+
+/* O contêiner de cada ano (também um Flexbox) */
+.ano-container {
+    display: flex;
+    flex-direction: column; /* Organiza os filmes em uma coluna */
+    align-items: center; /* Centraliza os filmes horizontalmente dentro do contêiner do ano */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    flex: 1 1 250px; /* shorthand para flex-grow, flex-shrink e flex-basis */
+    min-width: 250px;
+}
+
+.ano-container h3 {
+    color: #444;
+    margin-top: 0;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+/* Os itens individuais (os filmes) */
+.filme {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+.filme:hover {
+    transform: scale(1.03);
+}
+
+.filme img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filme h4 {
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+.filme p {
+    font-style: italic;
+    color: #888;
+}
+
+/* Estilo para o filme ganhador */
+.filme.ganhador {
+    background-color: #f0e68c; /* cor dourada */
+    border-color: #ffd700;
+}
